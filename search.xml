@@ -52,7 +52,7 @@
 <li>决定每个渲染图元中的哪些像素应该被绘制在屏幕上。它需要对上一个阶段得到的逐顶点数据（如纹理坐标、顶点颜色等）进行插值，然后再进行逐像素处理。</li>
 </ul>
 <p>这个阶段可以进一步分成更小的流水线阶段。</p>
-<h2 id="三个阶段之间的联系"><a href="#三个阶段之间的联系" class="headerlink" title="三个阶段之间的联系"></a>三个阶段之间的联系</h2><p><img src="http://img7x7.ddimg.cn/imgother10/31/24/1900783597_3_epub.png" alt="三个阶段之间的联系"></p>
+<h2 id="三个阶段之间的联系"><a href="#三个阶段之间的联系" class="headerlink" title="三个阶段之间的联系"></a>三个阶段之间的联系</h2><p><img data-src="http://img7x7.ddimg.cn/imgother10/31/24/1900783597_3_epub.png" alt="三个阶段之间的联系"></p>
 <h2 id="个人理解总结"><a href="#个人理解总结" class="headerlink" title="个人理解总结"></a>个人理解总结</h2><p>三个阶段中，应用阶段用于收集数据、需求；几何阶段对数据、需求进行分析处理；光栅化阶段将处理过的数据渲染出来。</p>
 ]]></content>
       <tags>
@@ -283,7 +283,7 @@
 <li>资源标签的设置</li>
 </ol>
 <p>在 Unity 环境内，除 C#脚本文件以外，选中任何文件后，在 Inspector 面板的下方 <strong>Asset Labels</strong> 功能区域可以给资源设置 AssetBundle 的文件路径和文件后缀。</p>
-<p><img src="/images/AssetBundle.png" alt="资源标签的设置"></p>
+<p><img data-src="/images/AssetBundle.png" alt="资源标签的设置"></p>
 <ol>
 <li>创建 AssetBundle</li>
 </ol>
@@ -296,7 +296,7 @@
 </ul>
 <p>使用 Unity 编辑器扩展，进行 AssetBundle 资源打包，将其保存在 StreamingAssets 文件夹中。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// AssetBundlePacker.cs</span></span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEditor;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AssetBundlePacker</span> &#123;</span><br><span class="line">    [<span class="meta">MenuItem(<span class="meta-string">"AssetBundlePacker/DoPacker"</span>)</span>]</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">DoPacker</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">string</span> path = Application.streamingAssetsPath;</span><br><span class="line">        BuildPipeline.BuildAssetBundles(path, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows64);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>打包结果<br><img src="/images/AssetBundle1.png" alt="资源打包结果"></p>
+<p>打包结果<br><img data-src="/images/AssetBundle1.png" alt="资源打包结果"></p>
 <h3 id="StreamingAssets、StreamingAssets-manifest-是什么文件？"><a href="#StreamingAssets、StreamingAssets-manifest-是什么文件？" class="headerlink" title="StreamingAssets、StreamingAssets.manifest 是什么文件？"></a>StreamingAssets、StreamingAssets.manifest 是什么文件？</h3><p>StreamingAssets.manifest 文件是用于专门存储打包后的 AssetBundle 文件的基本信息的。主要包含以下信息：<br>CRC 校验码：类似于 MD5，用于计算出该资源的一个特殊信息标示；<br>ClassTypes 列表：当前资源关联使用到了Unity 中的哪些类，这些类是以编号索引的形式存在的，每个编号都对应一个类文件。</p>
 <p>StreamingAssets 是包含 StreamingAssets.manifest 的 AssetBundle 文件。</p>
 <h2 id="下载-AssetBundle"><a href="#下载-AssetBundle" class="headerlink" title="下载 AssetBundle"></a>下载 AssetBundle</h2><p>下载 AssetBundle 有两种方法：缓存机制和非缓存机制。</p>
