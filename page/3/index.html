@@ -1,0 +1,2573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/zak.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://zaceyes.com').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.6.0',
+    exturl: true,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+<meta property="og:type" content="website">
+<meta property="og:title" content="橙色的代码">
+<meta property="og:url" content="http://zaceyes.com/page/3/index.html">
+<meta property="og:site_name" content="橙色的代码">
+<meta property="og:description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Zak Yu">
+<meta property="article:tag" content="Game">
+<meta property="article:tag" content=" Game Dev">
+<meta property="article:tag" content=" Unity">
+<meta property="article:tag" content=" Unity3D">
+<meta property="article:tag" content=" U3D">
+<meta property="article:tag" content=" C#">
+<meta property="article:tag" content=" 数据结构">
+<meta property="article:tag" content=" 算法">
+<meta property="article:tag" content=" Lua">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://zaceyes.com/page/3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>橙色的代码 - 有颜色的代码不孤独</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?88dbaf8a724b724d2aa3fdbee864f388";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">橙色的代码</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">有颜色的代码不孤独</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/09/05/sql-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/05/sql-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/" class="post-title-link" itemprop="url">SQL-基础语法(数据行、列相关)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-05 08:32:42" itemprop="dateCreated datePublished" datetime="2019-09-05T08:32:42+08:00">2019-09-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/09/05/sql-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/09/05/sql-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>下面语法 SQL Server 2008 R2 可以正常运行。</strong></p>
+<h2 id="SELECT-语句"><a href="#SELECT-语句" class="headerlink" title="SELECT 语句"></a>SELECT 语句</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name, column_name, ...</span><br><span class="line"><span class="keyword">FROM</span> table_name;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> table_name;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/09/05/sql-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/09/03/csharp-ado-net-dataset/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/03/csharp-ado-net-dataset/" class="post-title-link" itemprop="url">C# ADO .NET DataSet</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-03 17:17:52" itemprop="dateCreated datePublished" datetime="2019-09-03T17:17:52+08:00">2019-09-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/09/03/csharp-ado-net-dataset/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/09/03/csharp-ado-net-dataset/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>577</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>表示数据在内存中的缓存。</p>
+<h2 id="常用属性、方法"><a href="#常用属性、方法" class="headerlink" title="常用属性、方法"></a>常用属性、方法</h2><ol>
+<li>Tables<br>获取包含在 DataSet 中的表的集合。</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/09/03/csharp-ado-net-dataset/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/09/02/csharp-ado-net-sqlclient/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/02/csharp-ado-net-sqlclient/" class="post-title-link" itemprop="url">C# ADO .NET SqlClient</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-02 23:09:56" itemprop="dateCreated datePublished" datetime="2019-09-02T23:09:56+08:00">2019-09-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/09/02/csharp-ado-net-sqlclient/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/09/02/csharp-ado-net-sqlclient/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>System.Data.SqlClient 命名空间是用于 SQL Server 的 .NET 数据提供程序。</p>
+<h2 id="SqlConnectionStringBuilder"><a href="#SqlConnectionStringBuilder" class="headerlink" title="SqlConnectionStringBuilder"></a>SqlConnectionStringBuilder</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/09/02/csharp-ado-net-sqlclient/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/09/02/csharp-ado-net-%E8%BF%9E%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/02/csharp-ado-net-%E8%BF%9E%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="post-title-link" itemprop="url">C# ADO .NET 连接字符串</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-02 19:57:59" itemprop="dateCreated datePublished" datetime="2019-09-02T19:57:59+08:00">2019-09-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/09/02/csharp-ado-net-%E8%BF%9E%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/09/02/csharp-ado-net-%E8%BF%9E%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>224</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。</p>
+<h2 id="连接字符串的语法"><a href="#连接字符串的语法" class="headerlink" title="连接字符串的语法"></a>连接字符串的语法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">关键字=值;关键字=值;...</span><br></pre></td></tr></table></figure>
+<ol>
+<li>关键字不区分大小写；值根据数据源不同，可能区分大小写。</li>
+<li>关键字和值可以包含空格字符。关键字和无引号值中会忽略前后空格。</li>
+<li>如果值包含分号、Unicode控制字符或前导或尾随空格，则必须用单引号或双引号将其引起来。</li>
+<li>封闭字符不能出现在它所包含的值中。因此，包含单引号的值只能用双引号引起来，反之亦然。还可以通过将其中两个字符一起使用来转义封闭字符。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/08/30/ascii%E7%A0%81%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/30/ascii%E7%A0%81%E8%A1%A8/" class="post-title-link" itemprop="url">ASCII码表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-30 00:50:00" itemprop="dateCreated datePublished" datetime="2019-08-30T00:50:00+08:00">2019-08-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">辅助工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/08/30/ascii%E7%A0%81%E8%A1%A8/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/08/30/ascii%E7%A0%81%E8%A1%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Bin</th>
+<th style="text-align:center">Oct</th>
+<th style="text-align:center">Dec</th>
+<th style="text-align:center">Hex</th>
+<th style="text-align:center">缩写/字符</th>
+<th style="text-align:center">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0000 0000</td>
+<td style="text-align:center">00</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0x00</td>
+<td style="text-align:center">NUL(null)</td>
+<td style="text-align:center">空字符</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 0001</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0x01</td>
+<td style="text-align:center">SOH(start of headline)</td>
+<td style="text-align:center">标题开始</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 0010</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0x02</td>
+<td style="text-align:center">STX (start of text)</td>
+<td style="text-align:center">正文开始</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 0011</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0x03</td>
+<td style="text-align:center">ETX (end of text)</td>
+<td style="text-align:center">正文结束</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 0100</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0x04</td>
+<td style="text-align:center">EOT (end of transmission)</td>
+<td style="text-align:center">传输结束</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 0101</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0x05</td>
+<td style="text-align:center">ENQ (enquiry)</td>
+<td style="text-align:center">请求</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 0110</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">0x06</td>
+<td style="text-align:center">ACK (acknowledge)</td>
+<td style="text-align:center">收到通知</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 0111</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">0x07</td>
+<td style="text-align:center">BEL (bell)</td>
+<td style="text-align:center">响铃</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 1000</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">0x08</td>
+<td style="text-align:center">BS (backspace)</td>
+<td style="text-align:center">退格</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 1001</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">0x09</td>
+<td style="text-align:center">HT (horizontal tab)</td>
+<td style="text-align:center">水平制表符</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 1010</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0x0A</td>
+<td style="text-align:center">LF (NL line feed, new line)</td>
+<td style="text-align:center">换行键</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 1011</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">0x0B</td>
+<td style="text-align:center">VT (vertical tab)</td>
+<td style="text-align:center">垂直制表符</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 1100</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">0x0C</td>
+<td style="text-align:center">FF (NP form feed, new page)</td>
+<td style="text-align:center">换页键</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 1101</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">0x0D</td>
+<td style="text-align:center">CR (carriage return)</td>
+<td style="text-align:center">回车键</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 1110</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">0x0E</td>
+<td style="text-align:center">SO (shift out)</td>
+<td style="text-align:center">不用切换</td>
+</tr>
+<tr>
+<td style="text-align:center">0000 1111</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">0x0F</td>
+<td style="text-align:center">SI (shift in)</td>
+<td style="text-align:center">启用切换</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 0000</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">0x10</td>
+<td style="text-align:center">DLE (data link escape)</td>
+<td style="text-align:center">数据链路转义</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 0001</td>
+<td style="text-align:center">21</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">0x11</td>
+<td style="text-align:center">DC1 (device control 1)</td>
+<td style="text-align:center">设备控制1</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 0010</td>
+<td style="text-align:center">22</td>
+<td style="text-align:center">18</td>
+<td style="text-align:center">0x12</td>
+<td style="text-align:center">DC2 (device control 2)</td>
+<td style="text-align:center">设备控制2</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 0011</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">0x13</td>
+<td style="text-align:center">DC3 (device control 3)</td>
+<td style="text-align:center">设备控制3</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 0100</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">0x14</td>
+<td style="text-align:center">DC4 (device control 4)</td>
+<td style="text-align:center">设备控制4</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 0101</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">21</td>
+<td style="text-align:center">0x15</td>
+<td style="text-align:center">NAK (negative acknowledge)</td>
+<td style="text-align:center">拒绝接收</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 0110</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">22</td>
+<td style="text-align:center">0x16</td>
+<td style="text-align:center">SYN (synchronous idle)</td>
+<td style="text-align:center">同步空闲</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 0111</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">0x17</td>
+<td style="text-align:center">ETB (end of trans. block)</td>
+<td style="text-align:center">结束传输块</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 1000</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">0x18</td>
+<td style="text-align:center">CAN (cancel)</td>
+<td style="text-align:center">取消</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 1001</td>
+<td style="text-align:center">31</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">0x19</td>
+<td style="text-align:center">EM (end of medium)</td>
+<td style="text-align:center">媒介结束</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 1010</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">0x1A</td>
+<td style="text-align:center">SUB (substitute)</td>
+<td style="text-align:center">代替</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 1011</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">0x1B</td>
+<td style="text-align:center">ESC (escape)</td>
+<td style="text-align:center">换码(溢出)</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 1100</td>
+<td style="text-align:center">34</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">0x1C</td>
+<td style="text-align:center">FS (file separator)</td>
+<td style="text-align:center">文件分隔符</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 1101</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">0x1D</td>
+<td style="text-align:center">GS (group separator)</td>
+<td style="text-align:center">分组符</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 1110</td>
+<td style="text-align:center">36</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">0x1E</td>
+<td style="text-align:center">RS (record separator)</td>
+<td style="text-align:center">记录分隔符</td>
+</tr>
+<tr>
+<td style="text-align:center">0001 1111</td>
+<td style="text-align:center">37</td>
+<td style="text-align:center">31</td>
+<td style="text-align:center">0x1F</td>
+<td style="text-align:center">US (unit separator)</td>
+<td style="text-align:center">单元分隔符</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 0000</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">0x20</td>
+<td style="text-align:center">(space)</td>
+<td style="text-align:center">空格</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 0001</td>
+<td style="text-align:center">41</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">0x21</td>
+<td style="text-align:center">!</td>
+<td style="text-align:center">叹号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 0010</td>
+<td style="text-align:center">42</td>
+<td style="text-align:center">34</td>
+<td style="text-align:center">0x22</td>
+<td style="text-align:center">“</td>
+<td style="text-align:center">双引号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 0011</td>
+<td style="text-align:center">43</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">0x23</td>
+<td style="text-align:center">#</td>
+<td style="text-align:center">井号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 0100</td>
+<td style="text-align:center">44</td>
+<td style="text-align:center">36</td>
+<td style="text-align:center">0x24</td>
+<td style="text-align:center">$</td>
+<td style="text-align:center">美元符</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 0101</td>
+<td style="text-align:center">45</td>
+<td style="text-align:center">37</td>
+<td style="text-align:center">0x25</td>
+<td style="text-align:center">%</td>
+<td style="text-align:center">百分号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 0110</td>
+<td style="text-align:center">46</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">0x26</td>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:center">和号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 0111</td>
+<td style="text-align:center">47</td>
+<td style="text-align:center">39</td>
+<td style="text-align:center">0x27</td>
+<td style="text-align:center">‘</td>
+<td style="text-align:center">闭单引号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 1000</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">0x28</td>
+<td style="text-align:center">(</td>
+<td style="text-align:center">开括号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 1001</td>
+<td style="text-align:center">51</td>
+<td style="text-align:center">41</td>
+<td style="text-align:center">0x29</td>
+<td style="text-align:center">)</td>
+<td style="text-align:center">闭括号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 1010</td>
+<td style="text-align:center">52</td>
+<td style="text-align:center">42</td>
+<td style="text-align:center">0x2A</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">星号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 1011</td>
+<td style="text-align:center">53</td>
+<td style="text-align:center">43</td>
+<td style="text-align:center">0x2B</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">加号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 1100</td>
+<td style="text-align:center">54</td>
+<td style="text-align:center">44</td>
+<td style="text-align:center">0x2C</td>
+<td style="text-align:center">,</td>
+<td style="text-align:center">逗号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 1101</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">45</td>
+<td style="text-align:center">0x2D</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">减号/破折号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 1110</td>
+<td style="text-align:center">56</td>
+<td style="text-align:center">46</td>
+<td style="text-align:center">0x2E</td>
+<td style="text-align:center">.</td>
+<td style="text-align:center">句号</td>
+</tr>
+<tr>
+<td style="text-align:center">0010 1111</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">47</td>
+<td style="text-align:center">0x2F</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">斜杠</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 0000</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">48</td>
+<td style="text-align:center">0x30</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">字符0</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 0001</td>
+<td style="text-align:center">61</td>
+<td style="text-align:center">49</td>
+<td style="text-align:center">0x31</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">字符1</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 0010</td>
+<td style="text-align:center">62</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">0x32</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">字符2</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 0011</td>
+<td style="text-align:center">63</td>
+<td style="text-align:center">51</td>
+<td style="text-align:center">0x33</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">字符3</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 0100</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">52</td>
+<td style="text-align:center">0x34</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">字符4</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 0101</td>
+<td style="text-align:center">65</td>
+<td style="text-align:center">53</td>
+<td style="text-align:center">0x35</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">字符5</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 0110</td>
+<td style="text-align:center">66</td>
+<td style="text-align:center">54</td>
+<td style="text-align:center">0x36</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">字符6</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 0111</td>
+<td style="text-align:center">67</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">0x37</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">字符7</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 1000</td>
+<td style="text-align:center">70</td>
+<td style="text-align:center">56</td>
+<td style="text-align:center">0x38</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">字符8</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 1001</td>
+<td style="text-align:center">71</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">0x39</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">字符9</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 1010</td>
+<td style="text-align:center">72</td>
+<td style="text-align:center">58</td>
+<td style="text-align:center">0x3A</td>
+<td style="text-align:center">:</td>
+<td style="text-align:center">冒号</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 1011</td>
+<td style="text-align:center">73</td>
+<td style="text-align:center">59</td>
+<td style="text-align:center">0x3B</td>
+<td style="text-align:center">;</td>
+<td style="text-align:center">分号</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 1100</td>
+<td style="text-align:center">74</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">0x3C</td>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">小于</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 1101</td>
+<td style="text-align:center">75</td>
+<td style="text-align:center">61</td>
+<td style="text-align:center">0x3D</td>
+<td style="text-align:center">=</td>
+<td style="text-align:center">等号</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 1110</td>
+<td style="text-align:center">76</td>
+<td style="text-align:center">62</td>
+<td style="text-align:center">0x3E</td>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">大于</td>
+</tr>
+<tr>
+<td style="text-align:center">0011 1111</td>
+<td style="text-align:center">77</td>
+<td style="text-align:center">63</td>
+<td style="text-align:center">0x3F</td>
+<td style="text-align:center">?</td>
+<td style="text-align:center">问号</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 0000</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">0x40</td>
+<td style="text-align:center">@</td>
+<td style="text-align:center">电子邮件符号</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 0001</td>
+<td style="text-align:center">101</td>
+<td style="text-align:center">65</td>
+<td style="text-align:center">0x41</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">大写字母A</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 0010</td>
+<td style="text-align:center">102</td>
+<td style="text-align:center">66</td>
+<td style="text-align:center">0x42</td>
+<td style="text-align:center">B</td>
+<td style="text-align:center">大写字母B</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 0011</td>
+<td style="text-align:center">103</td>
+<td style="text-align:center">67</td>
+<td style="text-align:center">0x43</td>
+<td style="text-align:center">C</td>
+<td style="text-align:center">大写字母C</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 0100</td>
+<td style="text-align:center">104</td>
+<td style="text-align:center">68</td>
+<td style="text-align:center">0x44</td>
+<td style="text-align:center">D</td>
+<td style="text-align:center">大写字母D</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 0101</td>
+<td style="text-align:center">105</td>
+<td style="text-align:center">69</td>
+<td style="text-align:center">0x45</td>
+<td style="text-align:center">E</td>
+<td style="text-align:center">大写字母E</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 0110</td>
+<td style="text-align:center">106</td>
+<td style="text-align:center">70</td>
+<td style="text-align:center">0x46</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">大写字母F</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 0111</td>
+<td style="text-align:center">107</td>
+<td style="text-align:center">71</td>
+<td style="text-align:center">0x47</td>
+<td style="text-align:center">G</td>
+<td style="text-align:center">大写字母G</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 1000</td>
+<td style="text-align:center">110</td>
+<td style="text-align:center">72</td>
+<td style="text-align:center">0x48</td>
+<td style="text-align:center">H</td>
+<td style="text-align:center">大写字母H</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 1001</td>
+<td style="text-align:center">111</td>
+<td style="text-align:center">73</td>
+<td style="text-align:center">0x49</td>
+<td style="text-align:center">I</td>
+<td style="text-align:center">大写字母I</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 1010</td>
+<td style="text-align:center">112</td>
+<td style="text-align:center">74</td>
+<td style="text-align:center">0x4A</td>
+<td style="text-align:center">J</td>
+<td style="text-align:center">大写字母J</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 1011</td>
+<td style="text-align:center">113</td>
+<td style="text-align:center">75</td>
+<td style="text-align:center">0x4B</td>
+<td style="text-align:center">K</td>
+<td style="text-align:center">大写字母K</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 1100</td>
+<td style="text-align:center">114</td>
+<td style="text-align:center">76</td>
+<td style="text-align:center">0x4C</td>
+<td style="text-align:center">L</td>
+<td style="text-align:center">大写字母L</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 1101</td>
+<td style="text-align:center">115</td>
+<td style="text-align:center">77</td>
+<td style="text-align:center">0x4D</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">大写字母M</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 1110</td>
+<td style="text-align:center">116</td>
+<td style="text-align:center">78</td>
+<td style="text-align:center">0x4E</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">大写字母N</td>
+</tr>
+<tr>
+<td style="text-align:center">0100 1111</td>
+<td style="text-align:center">117</td>
+<td style="text-align:center">79</td>
+<td style="text-align:center">0x4F</td>
+<td style="text-align:center">O</td>
+<td style="text-align:center">大写字母O</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 0000</td>
+<td style="text-align:center">120</td>
+<td style="text-align:center">80</td>
+<td style="text-align:center">0x50</td>
+<td style="text-align:center">P</td>
+<td style="text-align:center">大写字母P</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 0001</td>
+<td style="text-align:center">121</td>
+<td style="text-align:center">81</td>
+<td style="text-align:center">0x51</td>
+<td style="text-align:center">Q</td>
+<td style="text-align:center">大写字母Q</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 0010</td>
+<td style="text-align:center">122</td>
+<td style="text-align:center">82</td>
+<td style="text-align:center">0x52</td>
+<td style="text-align:center">R</td>
+<td style="text-align:center">大写字母R</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 0011</td>
+<td style="text-align:center">123</td>
+<td style="text-align:center">83</td>
+<td style="text-align:center">0x53</td>
+<td style="text-align:center">S</td>
+<td style="text-align:center">大写字母S</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 0100</td>
+<td style="text-align:center">124</td>
+<td style="text-align:center">84</td>
+<td style="text-align:center">0x54</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">大写字母T</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 0101</td>
+<td style="text-align:center">125</td>
+<td style="text-align:center">85</td>
+<td style="text-align:center">0x55</td>
+<td style="text-align:center">U</td>
+<td style="text-align:center">大写字母U</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 0110</td>
+<td style="text-align:center">126</td>
+<td style="text-align:center">86</td>
+<td style="text-align:center">0x56</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center">大写字母V</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 0111</td>
+<td style="text-align:center">127</td>
+<td style="text-align:center">87</td>
+<td style="text-align:center">0x57</td>
+<td style="text-align:center">W</td>
+<td style="text-align:center">大写字母W</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 1000</td>
+<td style="text-align:center">130</td>
+<td style="text-align:center">88</td>
+<td style="text-align:center">0x58</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">大写字母X</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 1001</td>
+<td style="text-align:center">131</td>
+<td style="text-align:center">89</td>
+<td style="text-align:center">0x59</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">大写字母Y</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 1010</td>
+<td style="text-align:center">132</td>
+<td style="text-align:center">90</td>
+<td style="text-align:center">0x5A</td>
+<td style="text-align:center">Z</td>
+<td style="text-align:center">大写字母Z</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 1011</td>
+<td style="text-align:center">133</td>
+<td style="text-align:center">91</td>
+<td style="text-align:center">0x5B</td>
+<td style="text-align:center">[</td>
+<td style="text-align:center">开方括号</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 1100</td>
+<td style="text-align:center">134</td>
+<td style="text-align:center">92</td>
+<td style="text-align:center">0x5C</td>
+<td style="text-align:center">\</td>
+<td style="text-align:center">反斜杠</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 1101</td>
+<td style="text-align:center">135</td>
+<td style="text-align:center">93</td>
+<td style="text-align:center">0x5D</td>
+<td style="text-align:center">]</td>
+<td style="text-align:center">闭方括号</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 1110</td>
+<td style="text-align:center">136</td>
+<td style="text-align:center">94</td>
+<td style="text-align:center">0x5E</td>
+<td style="text-align:center">^</td>
+<td style="text-align:center">脱字符</td>
+</tr>
+<tr>
+<td style="text-align:center">0101 1111</td>
+<td style="text-align:center">137</td>
+<td style="text-align:center">95</td>
+<td style="text-align:center">0x5F</td>
+<td style="text-align:center">_</td>
+<td style="text-align:center">下划线</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 0000</td>
+<td style="text-align:center">140</td>
+<td style="text-align:center">96</td>
+<td style="text-align:center">0x60</td>
+<td style="text-align:center">`</td>
+<td style="text-align:center">开单引号</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 0001</td>
+<td style="text-align:center">141</td>
+<td style="text-align:center">97</td>
+<td style="text-align:center">0x61</td>
+<td style="text-align:center">a</td>
+<td style="text-align:center">小写字母a</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 0010</td>
+<td style="text-align:center">142</td>
+<td style="text-align:center">98</td>
+<td style="text-align:center">0x62</td>
+<td style="text-align:center">b</td>
+<td style="text-align:center">小写字母b</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 0011</td>
+<td style="text-align:center">143</td>
+<td style="text-align:center">99</td>
+<td style="text-align:center">0x63</td>
+<td style="text-align:center">c</td>
+<td style="text-align:center">小写字母c</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 0100</td>
+<td style="text-align:center">144</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">0x64</td>
+<td style="text-align:center">d</td>
+<td style="text-align:center">小写字母d</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 0101</td>
+<td style="text-align:center">145</td>
+<td style="text-align:center">101</td>
+<td style="text-align:center">0x65</td>
+<td style="text-align:center">e</td>
+<td style="text-align:center">小写字母e</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 0110</td>
+<td style="text-align:center">146</td>
+<td style="text-align:center">102</td>
+<td style="text-align:center">0x66</td>
+<td style="text-align:center">f</td>
+<td style="text-align:center">小写字母f</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 0111</td>
+<td style="text-align:center">147</td>
+<td style="text-align:center">103</td>
+<td style="text-align:center">0x67</td>
+<td style="text-align:center">g</td>
+<td style="text-align:center">小写字母g</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 1000</td>
+<td style="text-align:center">150</td>
+<td style="text-align:center">104</td>
+<td style="text-align:center">0x68</td>
+<td style="text-align:center">h</td>
+<td style="text-align:center">小写字母h</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 1001</td>
+<td style="text-align:center">151</td>
+<td style="text-align:center">105</td>
+<td style="text-align:center">0x69</td>
+<td style="text-align:center">i</td>
+<td style="text-align:center">小写字母i</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 1010</td>
+<td style="text-align:center">152</td>
+<td style="text-align:center">106</td>
+<td style="text-align:center">0x6A</td>
+<td style="text-align:center">j</td>
+<td style="text-align:center">小写字母j</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 1011</td>
+<td style="text-align:center">153</td>
+<td style="text-align:center">107</td>
+<td style="text-align:center">0x6B</td>
+<td style="text-align:center">k</td>
+<td style="text-align:center">小写字母k</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 1100</td>
+<td style="text-align:center">154</td>
+<td style="text-align:center">108</td>
+<td style="text-align:center">0x6C</td>
+<td style="text-align:center">l</td>
+<td style="text-align:center">小写字母l</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 1101</td>
+<td style="text-align:center">155</td>
+<td style="text-align:center">109</td>
+<td style="text-align:center">0x6D</td>
+<td style="text-align:center">m</td>
+<td style="text-align:center">小写字母m</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 1110</td>
+<td style="text-align:center">156</td>
+<td style="text-align:center">110</td>
+<td style="text-align:center">0x6E</td>
+<td style="text-align:center">n</td>
+<td style="text-align:center">小写字母n</td>
+</tr>
+<tr>
+<td style="text-align:center">0110 1111</td>
+<td style="text-align:center">157</td>
+<td style="text-align:center">111</td>
+<td style="text-align:center">0x6F</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">小写字母o</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 0000</td>
+<td style="text-align:center">160</td>
+<td style="text-align:center">112</td>
+<td style="text-align:center">0x70</td>
+<td style="text-align:center">p</td>
+<td style="text-align:center">小写字母p</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 0001</td>
+<td style="text-align:center">161</td>
+<td style="text-align:center">113</td>
+<td style="text-align:center">0x71</td>
+<td style="text-align:center">q</td>
+<td style="text-align:center">小写字母q</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 0010</td>
+<td style="text-align:center">162</td>
+<td style="text-align:center">114</td>
+<td style="text-align:center">0x72</td>
+<td style="text-align:center">r</td>
+<td style="text-align:center">小写字母r</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 0011</td>
+<td style="text-align:center">163</td>
+<td style="text-align:center">115</td>
+<td style="text-align:center">0x73</td>
+<td style="text-align:center">s</td>
+<td style="text-align:center">小写字母s</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 0100</td>
+<td style="text-align:center">164</td>
+<td style="text-align:center">116</td>
+<td style="text-align:center">0x74</td>
+<td style="text-align:center">t</td>
+<td style="text-align:center">小写字母t</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 0101</td>
+<td style="text-align:center">165</td>
+<td style="text-align:center">117</td>
+<td style="text-align:center">0x75</td>
+<td style="text-align:center">u</td>
+<td style="text-align:center">小写字母u</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 0110</td>
+<td style="text-align:center">166</td>
+<td style="text-align:center">118</td>
+<td style="text-align:center">0x76</td>
+<td style="text-align:center">v</td>
+<td style="text-align:center">小写字母v</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 0111</td>
+<td style="text-align:center">167</td>
+<td style="text-align:center">119</td>
+<td style="text-align:center">0x77</td>
+<td style="text-align:center">w</td>
+<td style="text-align:center">小写字母w</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 1000</td>
+<td style="text-align:center">170</td>
+<td style="text-align:center">120</td>
+<td style="text-align:center">0x78</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">小写字母x</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 1001</td>
+<td style="text-align:center">171</td>
+<td style="text-align:center">121</td>
+<td style="text-align:center">0x79</td>
+<td style="text-align:center">y</td>
+<td style="text-align:center">小写字母y</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 1010</td>
+<td style="text-align:center">172</td>
+<td style="text-align:center">122</td>
+<td style="text-align:center">0x7A</td>
+<td style="text-align:center">z</td>
+<td style="text-align:center">小写字母z</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 1011</td>
+<td style="text-align:center">173</td>
+<td style="text-align:center">123</td>
+<td style="text-align:center">0x7B</td>
+<td style="text-align:center">{</td>
+<td style="text-align:center">开花括号</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 1100</td>
+<td style="text-align:center">174</td>
+<td style="text-align:center">124</td>
+<td style="text-align:center">0x7C</td>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td>垂线</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 1101</td>
+<td style="text-align:center">175</td>
+<td style="text-align:center">125</td>
+<td style="text-align:center">0x7D</td>
+<td style="text-align:center">}</td>
+<td style="text-align:center">闭花括号</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 1110</td>
+<td style="text-align:center">176</td>
+<td style="text-align:center">126</td>
+<td style="text-align:center">0x7E</td>
+<td style="text-align:center">~</td>
+<td style="text-align:center">波浪号</td>
+</tr>
+<tr>
+<td style="text-align:center">0111 1111</td>
+<td style="text-align:center">177</td>
+<td style="text-align:center">127</td>
+<td style="text-align:center">0x7F</td>
+<td style="text-align:center">DEL (delete)</td>
+<td style="text-align:center">删除</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/08/30/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/30/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">选择排序</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-30 00:13:00" itemprop="dateCreated datePublished" datetime="2019-08-30T00:13:00+08:00">2019-08-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/08/30/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/08/30/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>用未排序子数组的第一个元素跟子数组的其他元素进行比较，将子数组中最小的值放在子数组的第一位。</p>
+<h2 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/08/30/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/08/30/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/30/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">插入排序</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-30 00:11:00" itemprop="dateCreated datePublished" datetime="2019-08-30T00:11:00+08:00">2019-08-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/08/30/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/08/30/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>拿未排序的元素跟有序的子数组比较。</p>
+<h2 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/08/30/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/08/30/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/30/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="post-title-link" itemprop="url">冒泡排序</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-30 00:09:00" itemprop="dateCreated datePublished" datetime="2019-08-30T00:09:00+08:00">2019-08-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/08/30/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/08/30/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>比较相邻的两个数，依次把较大的数往后移。</p>
+<h2 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/08/30/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/08/30/uml%E7%B1%BB%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/30/uml%E7%B1%BB%E5%9B%BE/" class="post-title-link" itemprop="url">UML类图</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-30 00:03:00" itemprop="dateCreated datePublished" datetime="2019-08-30T00:03:00+08:00">2019-08-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">辅助工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/08/30/uml%E7%B1%BB%E5%9B%BE/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/08/30/uml%E7%B1%BB%E5%9B%BE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>340</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="UML-类图"><a href="#UML-类图" class="headerlink" title="UML 类图"></a>UML 类图</h2><p>UML类图建模工具：<a href="staruml.io">StarUML</a></p>
+<h3 id="类（Class）"><a href="#类（Class）" class="headerlink" title="类（Class）"></a>类（Class）</h3><p>类图分三层。</p>
+<p>第一层，显示类的名称。如果是抽象类，则使用斜体字显示。</p>
+<p>第二层，类的特性。通常是字段和属性。</p>
+<p>第三层，类的操作。通常是方法或行为。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/08/30/uml%E7%B1%BB%E5%9B%BE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://zaceyes.com/2019/08/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/OrangeCode.png">
+      <meta itemprop="name" content="Zak Yu">
+      <meta itemprop="description" content="一个即将毕业的Unity3D游戏开发小菜鸡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橙色的代码">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">设计模式-策略模式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-30 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-30T00:00:00+08:00">2019-08-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/08/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/08/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="策略模式（Strategy-Pattern）"><a href="#策略模式（Strategy-Pattern）" class="headerlink" title="策略模式（Strategy Pattern）"></a>策略模式（Strategy Pattern）</h2><h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>策略模式是行为型模式，它定义了一系列的算法，并将每一个算法封装起来，而且使它们还可以相互替换。策略模式让算法独立于使用它的客户而独立变化。</p>
+<h3 id="核心内容"><a href="#核心内容" class="headerlink" title="核心内容"></a>核心内容</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/08/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zak Yu"
+      src="/images/OrangeCode.png">
+  <p class="site-author-name" itemprop="name">Zak Yu</p>
+  <div class="site-description" itemprop="description">一个即将毕业的Unity3D游戏开发小菜鸡</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-button motion-element">
+    <a onclick="Chatra('openChat', true)"><i class="fa fa-comment"></i>
+    Chat
+  </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3phY2V5ZXM=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zaceyes"><i class="fa fa-fw fa-github"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnphY2V5ZXNAb3V0bG9vay5jb20=" title="E-Mail → mailto:zaceyes@outlook.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zak Yu</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">48k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">44 分钟</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v4.1.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly9tdXNlLnRoZW1lLW5leHQub3Jn">NexT.Muse</span> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+  <script>
+    (function(d, w, c) {
+      w.ChatraID = 'hf6ZPQca3HA9S4gPe';
+      var s = d.createElement('script');
+      w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+  </script>
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el: '#valine-comments',
+      verify: true,
+      notify: true,
+      appId: 'x553sRnOPI2inAltsyNI66ed-gzGzoHsz',
+      appKey: 'wwzEM8SXElKTg8fGUeNSsHC7',
+      placeholder: "欢迎指点！",
+      avatar: 'mm',
+      meta: guest,
+      pageSize: '10' || 10,
+      visitor: false,
+      lang: 'zh-cn' || 'zh-cn',
+      path: location.pathname,
+      recordIP: true,
+      serverURLs: ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
